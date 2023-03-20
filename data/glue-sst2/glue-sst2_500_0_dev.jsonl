@@ -1,0 +1,100 @@
+{"task": "glue-sst2", "input": "Review: reflects the worst of their shallow styles \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: this is rote drivel aimed at mom and dad 's wallet . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: no way original , \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: is about the worst thing chan has done in the united states \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a disturbing disregard \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a scruffy \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: in the worst elements of all of them \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: hard as this may be to believe , here on earth , a surprisingly similar teen drama , was a better film . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: if any of them list this ` credit ' on their resumes in the future \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: despite lagging near the finish line \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: most offensive action \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: trying to pass off as acceptable teen entertainment for some time now \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: hard for me \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: all the values of a straight-to-video movie \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: jealousy , betrayal , forgiveness and murder \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: verging on mumbo-jumbo \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: what is missing from it \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: that worked five years ago but has since lost its fizz \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: one that allows him to churn out one mediocre movie after another \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: but mainstream audiences will find little of interest in this film , which is often preachy and poorly acted . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the second half of the movie really goes downhill . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: that never quite equals the sum of its pretensions . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: after another , most of which involve precocious kids getting the better of obnoxious adults \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: involving the various silbersteins that it feels more like the pilot episode of a tv series than a feature film \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: all of dean 's mannerisms and self-indulgence , \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: orgy \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: collapses \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: , vapid and devoid \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: by a plot that 's just too boring and obvious \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: complain \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: soulless and -- even more damning -- \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: cold fish \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a degree of randomness usually achieved only by lottery drawing \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: is advised to take the warning literally , and log on to something more user-friendly \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: discomfort \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: you never want to see another car chase , explosion or gunfight again \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: totally overwrought , \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: makes a joke out of car chases for an hour and then gives us half an hour of car chases . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: awfulness \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: lax and limp \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a paint-by-numbers picture \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: through this summer that do not involve a dentist drill \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: i heard a mysterious voice , and felt myself powerfully drawn toward the light -- the light of the exit sign \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: nights feels more like a quickie tv special than a feature film ... \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: drawn-out \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: and often contradictory \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a stereotype \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: sorvino makes the princess seem smug and cartoonish , and the film only really comes alive when poor hermocrates and leontine pathetically compare notes about their budding amours . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: too thin \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: sitting in a downtown caf\u00e9 , overhearing a bunch of typical late-twenty-somethings natter on about nothing , and \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: resurrection \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: different from others in its genre in that it is does not rely on dumb gags , anatomical humor , or character cliches \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: decided to let crocodile hunter steve irwin do what he does best , and fashion a story around him . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the best , \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: found in almost all of his previous works \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: truly excellent \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: director to watch \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: sharp and quick \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: warm your heart without making you feel guilty about it \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the magnificent jackie chan \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: winning performances \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: its love of life and beauty \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the the wisdom and humor of its subjects \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the town has kind of an authentic feel \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: entirely believable \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: that old adage about women being unknowable \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: have potential as a cult film \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: sunny disposition \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: excellent use of music by india 's popular gulzar and jagjit singh \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: ably captures the complicated relationships in a marching band . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: wisdom \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: does a solid job of slowly , steadily building up to the climactic burst of violence \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: is a winning comedy that excites the imagination and tickles the funny bone \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: is so resolutely \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: hilariously , gloriously alive , and \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: true to its title \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: glory days \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: puts a human face \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: every moment crackles with tension , and by the end of the flick , you 're on the edge of your seat \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: , then by all means check it out . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: while parker and co-writer catherine di napoli are faithful to melville 's plotline , they and a fully engaged supporting cast ... have made the old boy 's characters more quick-witted than any english lit \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: as a tribute \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a brilliant college student -- where 's pauly shore as the rocket scientist ? \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: of the conflict that came to define a generation \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: richly entertaining and suggestive of any number of metaphorical readings . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: will be moved to the edge of their seats by the dynamic first act \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: has created a provocative , absorbing drama that reveals the curse of a self-hatred instilled by rigid social mores . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: that are quite touching \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: i liked about schmidt a lot , but i have a feeling that i would have liked it much more if harry & tonto never existed . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: two central performances \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: are all in the performances , from foreman 's barking-mad taylor to thewlis 's smoothly sinister freddie and bettany/mcdowell 's hard-eyed gangster . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: affluence \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: joyous \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: then blood work is for you . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: , frida gets the job done . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: against shimmering cinematography that lends the setting the ethereal beauty of an asian landscape painting \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: may rate as the most magical and most fun family fare of this or any recent holiday season \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: ability to pull together easily accessible stories that resonate with profundity \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: its heartfelt concern about north korea 's recent past and south korea 's future \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a delightful entree in the tradition of food movies . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}

@@ -1,0 +1,5 @@
+OUT_SELECT='out_select'
+OUT_DM='out_datamodel'
+OUT_ONESHOT='out_k1'
+OUT_DATA_COLLECT='out_dicl'
+OUT_SENT_EMBED='sent_embeds'
