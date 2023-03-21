@@ -76,18 +76,14 @@ do
     python baseline_oneshot.py --model ${gpt2} --task $t --useful_size ${usize} --n_trunc ${n_trunc}
     run_icl
 
-    mode="Shuffle"
-    python baseline_shuffle.py --model ${gpt2} --task $t --ckpt_dir Dicl/${gpt2}/label_$t --n_trunc ${n_trunc}
-    run_icl
-
     top=5
     mode="TopPrompts-${top}"
-    python baseline_top_prompts.py --model ${gpt2} --task $t --n_trunc ${n_trunc} --n_top ${top}
+    python baseline_top_prompts.py --model ${gpt2} --task $t --ckpt_dir Dicl/${gpt2}/label_$t --n_trunc ${n_trunc} --n_top ${top}
     run_icl
 
     top=10
     mode="TopPrompts-${top}"
-    python baseline_top_prompts.py --model ${gpt2} --task $t --n_trunc ${n_trunc} --n_top ${top}
+    python baseline_top_prompts.py --model ${gpt2} --task $t --ckpt_dir Dicl/${gpt2}/label_$t --n_trunc ${n_trunc} --n_top ${top}
     run_icl
 
     mode="CondAcc-bad"

@@ -1,0 +1,8 @@
+Dicl/
+out_select/
+final_results/
+cached/
+*/__pycache__/
+__pycache__/
+.*.swp
+diff.sh

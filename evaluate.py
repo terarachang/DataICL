@@ -96,6 +96,10 @@ def save_performance(args, task, probs, all_perf):
     print('Acc:')
     print(repr(all_perf))
 
+    print(all_perf.shape)
+    all_perf_ = all_perf[-50:]
+    print(f"Avg ± Std: {all_perf_.mean():.3f} ± {all_perf_.std():.3f}, Min:{all_perf_.min():.3f}")
+
 
 def run(logger, task, metaicl_data, metaicl_model, train_data, eval_data, seed,
         is_classification):
