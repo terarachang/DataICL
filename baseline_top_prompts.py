@@ -12,7 +12,7 @@ from collections import defaultdict
 from utils.selection import *
 from config.config import OUT_SELECT
 
-def get_best_ids(args, dev_labels):
+def get_best_ids(args, dev_labels, tag):
     ic_data = ICData(args.task, args.ckpt_dir, args.n_perm, n_train_sets=None, is_unlabel=args.is_unlabel)
     acc_scores = (ic_data.logits.argmax(-1).numpy() == dev_labels).mean(-1) #[2, n_train_subsets]
     acc_scores = acc_scores.reshape(-1)
@@ -28,7 +28,8 @@ def get_best_ids(args, dev_labels):
     for i, idx in enumerate(sorted_subset_idx):
         subset_train_ids, order = train_ids[idx], all_permutations[permute_ids[idx]]
         best_subset_ids[i] = subset_train_ids[list(order)] # recover the original order
-    np.save(os.path.join(OUT_SELECT, f'{args.model}-{args.task}_subset_ids-Best{args.n_top}.npy'), best_subset_ids)
+
+    np.save(os.path.join(OUT_SELECT, f'{args.model}-{args.task}_subset_ids-Best{args.n_top}{tag}.npy'), best_subset_ids)
     
     return best_subset_ids
 
@@ -36,16 +37,17 @@ def get_best_ids(args, dev_labels):
 def main(args):
     args.model = args.model.lower()
     n_labels, args.n_shots = setup(args.task)
+    tag = "-unlabeled" if args.is_unlabel else ""
 
-    _, train_labels, train_data, _, dev_labels, _ = get_train_dev_data('data', args.task, False)
+    _, train_labels, train_data, _, dev_labels, _ = get_train_dev_data('data', args.task, args.is_unlabel)
 
-    ids = get_best_ids(args, dev_labels)
+    ids = get_best_ids(args, dev_labels, tag)
     common_ids = np.unique(ids.reshape(-1))
     print(ids.shape, len(common_ids))
     valid_ids = recombine(common_ids, train_labels, n_labels, args.n_shots)
     new_ids = truncate(valid_ids, args.n_truncate, len(common_ids))
 
-    method = f"TopPrompts-{args.n_top}"
+    method = f"TopPrompts-{args.n_top}{tag}"
     dump_selected_subsets(args.task, args.model, new_ids, train_data, method)
 
 
