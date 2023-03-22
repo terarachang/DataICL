@@ -24,8 +24,9 @@ from utils.data import load_data, random_subset_of_comb
 from config.config import OUT_ONESHOT
 
 
-def get_data(task, model, n, split='train'):
-    fn = f"data/{task}/{task}_{n}_0_{split}.jsonl"
+def get_data(task, model, is_unlabel):
+    sub_dir = "unlabeled" if is_unlabel else ""
+    fn = os.path.join("data", task, sub_dir, f"{task}_500_0_train.jsonl")
     data = []
     with open(fn, "r") as f:
         for line in f:
@@ -75,7 +76,7 @@ def main(logger, args):
     logger.info(f"Seed: {seed}, Task: {test_task}, # Class: {n_class}")
     logger.info(f"[Dev]: {len(dev_data)}")
 
-    all_train_data = get_data(test_task, args.gpt2, 500, 'train')
+    all_train_data = get_data(test_task, args.gpt2, args.is_unlabel)
     n_prompts = len(all_train_data)
 
 
@@ -123,6 +124,7 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_demonstrations", default=False, action="store_true")
     parser.add_argument('--is_classification', action='store_false')
+    parser.add_argument("--is_unlabel", action="store_true")
     parser.add_argument("--trunc_method", type=str, default='right', choices=['right', 'left', 'middle'])
     parser.add_argument("--dataset", type=str, default=None, required=True)
     parser.add_argument("--k", type=int, default=4)

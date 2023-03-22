@@ -1,8 +1,9 @@
 Dicl/
-out_select/
+out_*/
 final_results/
 cached/
 */__pycache__/
 __pycache__/
 .*.swp
 diff.sh
+print_latex*

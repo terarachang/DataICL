@@ -52,8 +52,19 @@ do
         exit
     fi
 
+    ckpt=Dicl/${gpt2}/unlabel_$t
+
     mode="CondAcc-good-unlabeled"
-    python select_condacc.py --model ${gpt2} --task $t --ckpt_dir Dicl/${gpt2}/unlabel_$t --useful_size ${usize} --n_trunc ${n_trunc} --is_unlabel
+    python select_condacc.py --model ${gpt2} --task $t --ckpt_dir ${ckpt} --useful_size ${usize} --n_trunc ${n_trunc} --is_unlabel
+    run_icl
+
+    top=5
+    mode="TopPrompts-${top}-unlabeled"
+    python baseline_top_prompts.py --model ${gpt2} --task $t --ckpt_dir ${ckpt} --n_trunc ${n_trunc} --n_top ${top} --is_unlabel
+    run_icl
+
+    mode="OneShot-unlabeled"
+    python baseline_oneshot.py --model ${gpt2} --task $t --useful_size ${usize} --n_trunc ${n_trunc} --is_unlabel
     run_icl
 
     mode="All-unlabeled"
