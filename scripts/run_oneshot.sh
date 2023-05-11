@@ -1,5 +1,5 @@
 gpu_i=$1
-dset="subj"
+dset="ag_news"
 gpt2="gpt-j-6b"
 split="dev"
 bs=50
@@ -15,7 +15,7 @@ then
     maxlen=240
 elif [ ${dset} == "ag_news" ]
 then
-    maxlen=160
+    maxlen=256
 elif [ ${dset} == "boolq" ]
 then
     maxlen=360
