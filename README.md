@@ -68,8 +68,7 @@ data
 
 
 ### Construct $\mathcal{D}_{\text{ICL}}$
-- Note: the START does not allow uploading files > 50MB, so we only submit part of the $\mathcal{D}_{\text{ICL}}$ in our supplementary materials
-- We release the set of prompt-output pairs $\mathcal{D}_{\text{ICL}}$ in [`Dicl`](Dicl/). The files are organized as follow:
+- We release the set of prompt-output pairs $\mathcal{D}_{\text{ICL}}$ in [`Dicl`](https://drive.google.com/file/d/1_ZhDS__fF49DBydKu3pyoby0OOTEwQA2/view?usp=sharing). The files are organized as follow:
 
 ```
 Dicl
