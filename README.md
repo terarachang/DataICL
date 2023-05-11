@@ -87,8 +87,10 @@ Dicl
 │   ├── unlabel_scicite/
 │   ├── label_ag_news/
 │   └── unlabel_ag_news/
-└── opt-13b/
-    └── ...
+├── opt-13b/
+├── opt-6.7b/
+└── gpt-neo-2.7B/
+
 ```
 - Each task folder contains 4 files:
     - `*sampled.pkl`: the list of sampled prompts, where each prompt consists of a list of $K$ training examples.
