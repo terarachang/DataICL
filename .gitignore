@@ -7,3 +7,4 @@ __pycache__/
 .*.swp
 diff.sh
 print_latex*
+*.zip
