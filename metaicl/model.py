@@ -87,7 +87,7 @@ class MetaICLModel(object):
                 model = AutoModelForCausalLM.from_pretrained(f"bigscience/{gpt2}", cache_dir="cached",
                     device_map='auto', load_in_8bit=True)
             elif "gpt-j" in gpt2:
-                model = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", cache_dir="cached", 
+                model = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6b", cache_dir="cached", 
                     revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True)
             elif "gpt-neo-" in gpt2:
                 model = GPTNeoForCausalLM.from_pretrained(f"EleutherAI/{gpt2}", cache_dir="cached")

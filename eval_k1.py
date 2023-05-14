@@ -40,7 +40,7 @@ def main(logger, args):
     if args.gpt2.startswith("gpt2"):
         tokenizer = GPT2Tokenizer.from_pretrained(args.gpt2, cache_dir="cached")
     elif "gpt-j" in args.gpt2:
-        tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B", cache_dir="cached")
+        tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6b", cache_dir="cached")
     elif "gpt-neo-" in args.gpt2:
         tokenizer = GPT2Tokenizer.from_pretrained(f"EleutherAI/{args.gpt2}", cache_dir="cached")
     elif "opt" in args.gpt2:

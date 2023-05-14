@@ -10,7 +10,7 @@ from utils import get_data, prep_text
 class Perplexity():
     def __init__(self, model_id, cache_dir="cached"):
         if "gpt-j" in model_id:
-            plm = "EleutherAI/gpt-j-6B"
+            plm = "EleutherAI/gpt-j-6b"
             self.tokenizer = AutoTokenizer.from_pretrained(plm, cache_dir=cache_dir)
             self.model = GPTJForCausalLM.from_pretrained(plm, cache_dir=cache_dir, 
                     revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True)
