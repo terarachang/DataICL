@@ -2,7 +2,7 @@ gpu_i=$1
 gpt2="gpt-j-6b"
 k=4
 split="test"
-task_arr=("boolq") #"ag_news" "boolq" "scicite" "subj")
+task_arr=("glue-sst2" "boolq" "ag_news" "subj" "scicite")
 n_trunc=50
 usize=20
 

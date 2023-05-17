@@ -90,7 +90,7 @@ do
     mode="CondAcc-bad" #Section 6
     run_icl
 
-    mode="CrossLLM"    #Section 6.3
+    mode="CrossLLM"    #Section 6.3 #SST-2 only
     python select_cross_llms.py
     run_icl
 
