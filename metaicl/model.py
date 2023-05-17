@@ -83,9 +83,6 @@ class MetaICLModel(object):
             elif "opt" in gpt2:
                 model = AutoModelForCausalLM.from_pretrained(f"facebook/{gpt2}", cache_dir="cached",
                     torch_dtype=torch.float16)
-            elif "bloom" in gpt2:
-                model = AutoModelForCausalLM.from_pretrained(f"bigscience/{gpt2}", cache_dir="cached",
-                    device_map='auto', load_in_8bit=True)
             elif "gpt-j" in gpt2:
                 model = GPTJForCausalLM.from_pretrained("EleutherAI/gpt-j-6b", cache_dir="cached", 
                     revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True)

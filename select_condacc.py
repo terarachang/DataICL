@@ -9,6 +9,7 @@ import torch
 import os
 import pdb
 from collections import defaultdict
+from config.config import OUT_SCORES
 from utils.selection import *
 
 
@@ -36,6 +37,8 @@ def main(args):
     for idx, acc_list in id2acc.items():
         avg_accs[idx] = np.array(acc_list).mean()
     print(f"[Selection; Socres of Train Ex] Max: {avg_accs.max():.3f}, Avg: {avg_accs.mean():.3f}, Min: {avg_accs.min():.3f}")
+    os.makedirs(OUT_SCORES, exist_ok=True)
+    np.save(os.path.join(OUT_SCORES, f'CondAcc_{args.model}_{args.task}'), avg_accs)
 
     # sort train_ids and select the training examples with the highest avg acc (CondAcc-good)
     sorted_ids = np.argsort(-avg_accs)

@@ -1,11 +1,13 @@
-## Careful Data Curation Stabilizes In-context Learning
+## Data Curation Alone Can Stabilize In-context Learning (ACL 23)
 
 ![Python](https://img.shields.io/badge/python-3.8-green.svg?style=plastic)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.12-green.svg?style=plastic)
 ![transformers](https://img.shields.io/badge/transformers-4.20.1-green.svg?style=plastic)
 ![GPU](https://img.shields.io/badge/RTX-A6000-green.svg?style=plastic)
 
-*This repository is modified from [MetaICL](https://github.com/facebookresearch/MetaICL#metaicl-learning-to-learn-in-context)
+> https://arxiv.org/abs/2212.10378
+
+> This repository is based on [MetaICL](https://github.com/facebookresearch/MetaICL#metaicl-learning-to-learn-in-context)
 
 ### CondAcc
 - The proposed CondAcc method is implemented in `select_condacc.py`

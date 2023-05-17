@@ -136,7 +136,7 @@ class MetaICLData(object):
 
             n_keep = self.max_length_per_example - 2 - len(output_tokens)
             if len(input_tokens) > n_keep:
-                input_tokens = self._truncate(input_tokens, n_keep)
+                input_tokens = self._truncate(input_tokens, n_keep, self.trunc_method)
 
             return input_tokens, output_tokens
 

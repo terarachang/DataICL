@@ -87,7 +87,11 @@ do
     python baseline_top_prompts.py --model ${gpt2} --task $t --ckpt_dir ${ckpt} --n_trunc ${n_trunc} --n_top ${top}
     run_icl
 
-    mode="CondAcc-bad"
+    mode="CondAcc-bad" #Section 6
+    run_icl
+
+    mode="CrossLLM"    #Section 6.3
+    python select_cross_llms.py
     run_icl
 
     
