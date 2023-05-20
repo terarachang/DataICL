@@ -5,7 +5,6 @@ import torch
 import torch.nn.functional as F
 
 from tqdm import tqdm
-from transformers import Adafactor, AdamW, get_linear_schedule_with_warmup
 from transformers import AutoModelForCausalLM, GPTJForCausalLM, GPTNeoForCausalLM
 
 

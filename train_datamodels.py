@@ -18,12 +18,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def main(args):
     dev_labels = get_labels(args.task, os.path.join('data', args.task), 'dev')
-    print(repr(dev_labels))
     n_dev = len(dev_labels)
 
-    ic_data = ICData(args.task, args.ckpt_dir, args.n_perm, args.n_train_sets, args.is_unlabel)
+    ic_data = ICData(args.task, args.ckpt_dir, args.n_perm, args.n_train_sets, False)
     n_train_sets = ic_data.n_train_sets
-    datamodel_dir = os.path.join(args.datamodel_dir, args.task, 'base')
+    datamodel_dir = os.path.join(args.datamodel_dir, args.task, n_train_sets)
 
     if args.do_init:
         path = os.path.join(datamodel_dir, 'weights.pt')
@@ -35,7 +34,7 @@ def main(args):
     for dev_id in tqdm(range(n_dev)):
         print(f'Test id = {dev_id}')
         train_loader, train_unshf_loader = \
-            train_test_split(ic_data, args.task, args.feat_type, dev_id, dev_labels[dev_id], indicator_len-1)
+            prep_data(ic_data, args.task, args.feat_type, dev_id, dev_labels[dev_id], indicator_len-1)
 
         if dev_id == 0: # init.
             weights = torch.zeros((n_dev, indicator_len))
@@ -71,7 +70,7 @@ def main(args):
             if args.is_verbose and e % 20 == 0:
                 print(loss.item())
 
-        # eval
+        # eval on train set; make sure it is well fitted
         weights[dev_id] = model.weight.squeeze().detach().cpu()
 
         preds, l1_tr = evaluate(model, train_unshf_loader)
@@ -114,7 +113,7 @@ def get_loader(inps, tgts, is_train):
     return loader
 
 
-def train_test_split(ic_data, task, feat_type, dev_id, label, bias_id):
+def prep_data(ic_data, task, feat_type, dev_id, label, bias_id):
     
     k = 3 if task in ["glue-mnli", "scicite"] else 4
     all_permute = list(itertools.permutations(list(range(k))))
@@ -133,8 +132,8 @@ def train_test_split(ic_data, task, feat_type, dev_id, label, bias_id):
         return Y
 
 
-    train_X, train_Y, test_X, test_Y = [], [], [], []
-    train_label_patterns, test_label_patterns = [], []
+    train_X, train_Y = [], []
+    train_label_patterns = []
     # for each permutation
     for i in range(n_perm):
         Y = get_datamodel_target(i)
@@ -209,7 +208,6 @@ def build_model(indicator_len, weights=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--is_unlabel", action="store_true")
     parser.add_argument("--is_verbose", action="store_false")
     parser.add_argument("--do_init", action="store_true")
     parser.add_argument("--task", type=str, default="glue-sst2", required=True)
