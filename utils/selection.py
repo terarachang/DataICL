@@ -111,7 +111,7 @@ class ICData():
             self.logits = logits
             self.n_train_sets = self.logits.shape[1]
         self.n_labels = self.logits.shape[-1]
-        print(f"{self.logits.shape}; n_labels: {self.n_labels}; n_train_subsets: {self.n_train_sets}")
+        print(f"{self.logits.shape}; n_labels: {self.n_labels}; n_sets: {self.n_train_sets}")
 
     def load_meta(self, task):
         permute_ids = np.load(os.path.join(self.ckpt_dir, f"{task}-permute_ids.npy"))

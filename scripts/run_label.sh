@@ -21,26 +21,32 @@ do
         if [ ${gpt2} == "gpt-j-6b" ]
         then
             maxlen=128
+            n_dm=50000
         else
             maxlen=80
+            n_dm=25000
         fi
         bs=32
     elif [ $t == "subj" ]
     then
         maxlen=80
         bs=50
+        n_dm=50000
     elif [ $t == "boolq" ]
     then
         maxlen=256
         if [ ${gpt2} == "opt-13b" ]
         then
             bs=15
+            n_dm=25000
         else
             bs=20
+            n_dm=50000
         fi
     elif [ $t == "ag_news" ]
     then
         maxlen=128
+        n_dm=20000
         if [ ${gpt2} == "opt-13b" ]
         then
             bs=25
@@ -50,6 +56,7 @@ do
     elif [ $t == "scicite" ]
     then
         maxlen=160
+        n_dm=20000
         bs=32
         k=3
     else
@@ -64,7 +71,7 @@ do
     run_icl
 
     mode="Datamodels"
-    python select_datamodels.py --model ${gpt2} --task $t --useful_size ${usize} --n_trunc ${n_trunc}
+    python select_datamodels.py --model ${gpt2} --task $t --useful_size ${usize} --n_trunc ${n_trunc} --n_train_sets ${n_dm}
     run_icl
 
     mode="All"
@@ -94,6 +101,5 @@ do
     python select_cross_llms.py
     run_icl
 
-    
 done
 

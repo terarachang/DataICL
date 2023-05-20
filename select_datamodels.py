@@ -22,7 +22,7 @@ def main(args):
     n_patterns, label_feats, labelfeat2idx = set_label_features(n_labels)
 
     # get train / dev set
-    x_train, train_labels, train_data, _, dev_labels, _ = get_train_dev_data('data', args.task, args.is_unlabel)
+    x_train, train_labels, train_data, _, dev_labels, _ = get_train_dev_data('data', args.task, False)
     n_train = len(train_labels)
 
     # label_to_location for selection
@@ -33,10 +33,9 @@ def main(args):
     print(lb2loc)
 
     # selection for each label pattern
-    mode = 'onehot_w'
     weight_counts = torch.zeros((n_patterns, n_train, n_shots), dtype=torch.long)
 
-    weights_16x, biases_16x = load_16x_weights(n_patterns, args.task, args.datamodel_dir, 'base')
+    weights_16x, biases_16x = load_16x_weights(n_patterns, args.task, args.datamodel_dir, args.n_train_sets)
     print("weights.shape", weights_16x[0].shape, "biases.shape", biases_16x[0].shape)
 
     for i in range(n_patterns):
@@ -142,11 +141,11 @@ def set_label_features(n_labels):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--is_unlabel", action="store_true")
     parser.add_argument("--is_verbose", action="store_true")
     parser.add_argument("--model", type=str, default="gpt-j-6b", required=True)
     parser.add_argument("--task", type=str, default="glue-sst2", required=True)
     parser.add_argument("--n_truncate", type=int, default=50)
+    parser.add_argument("--n_train_sets", type=int, required=True)
     parser.add_argument("--n_perm", type=int, default=2)
     parser.add_argument("--useful_size", type=int, default=20)
 

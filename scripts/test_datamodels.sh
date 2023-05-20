@@ -29,6 +29,7 @@ then
     patterns=16
 elif [ ${dset} == "ag_news" ]
 then
+    n_subsets_arr=("20000")
     patterns=24
 elif [ ${dset} == "scicite" ]
 then
