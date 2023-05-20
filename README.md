@@ -18,8 +18,13 @@
 ```bash
 $ bash scripts/train_datamodels.sh
 ```
+- To test datamodels (Appendix A3), run:
+```bash
+$ bash scripts/test_datamodels.sh
+```
 - The Datamodels selection is implemented in `select_datamodels.py`
 - To reproduce the results in the paper, see [Evaluation](#Evaluation)
+- Download pretrained datamodels [`out_datamodel.zip`](https://drive.google.com/file/d/1Z9Fci7bOU9WLvgFI_0y2iTTJgiFKfYhM/view?usp=sharing)
 
 ### Baselines
 - The **Oneot** baseline:
@@ -70,7 +75,7 @@ data
 
 
 ### Construct $\mathcal{D}_{\text{ICL}}$
-- We release the set of prompt-output pairs $\mathcal{D}_{\text{ICL}}$ in [`Dicl`](https://drive.google.com/file/d/1_ZhDS__fF49DBydKu3pyoby0OOTEwQA2/view?usp=sharing). The files are organized as follow:
+- We release the set of prompt-output pairs $\mathcal{D}_{\text{ICL}}$ in [`Dicl`](https://drive.google.com/file/d/1gKueGgRjVKWZ5RXE9PBVyCD5dvbLYdRk/view?usp=sharing). The files are organized as follow:
 
 ```
 Dicl
