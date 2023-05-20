@@ -22,7 +22,7 @@ def main(args):
 
     ic_data = ICData(args.task, args.ckpt_dir, args.n_perm, args.n_train_sets, False)
     n_train_sets = ic_data.n_train_sets
-    datamodel_dir = os.path.join(args.datamodel_dir, args.task, n_train_sets)
+    datamodel_dir = os.path.join(args.datamodel_dir, args.task, str(n_train_sets))
 
     if args.do_init:
         path = os.path.join(datamodel_dir, 'weights.pt')
@@ -161,8 +161,6 @@ def prep_data(ic_data, task, feat_type, dev_id, label, bias_id):
             order = all_permute[p_i]
             X[j][:k] = get_indicator(ic_data.train_ids[j], order, k)
 
-        # Note: split inside the Permutation loop to avoid Combination leackage
-        # train split
         train_X.append(X[valid_tr_ids])
         train_Y.append(Y[valid_tr_ids])
         train_label_patterns.extend(label_patterns[valid_tr_ids])

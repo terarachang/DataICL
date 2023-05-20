@@ -87,6 +87,7 @@ class ICData():
         merged_fn = os.path.join(self.ckpt_dir, f'merged-{task}.pt')
         if os.path.exists(merged_fn):
             logits = torch.load(merged_fn)
+            if self.n_perm == 1: logits = logits.unsqueeze(0) # test set
         else:
             fns = glob(os.path.join(self.ckpt_dir, f'{task}-*.pt'))
             fns = sorted(fns)
