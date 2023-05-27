@@ -30,16 +30,16 @@
 7. Construct $\mathcal{D}_{\text{ICL}}$
 8. How to use the released $\mathcal{D}_{\text{ICL}}$?
 
-### Quick Start
+## Quick Start
 - ```$ pip install -r requirements.txt```
 - ```$ bash demo/download_dicl.sh``` will download the released prompt-output pairs
     - see the Construct $\mathcal{D}_{\text{ICL}}$ section below for more details
 
-### CondAcc
+## CondAcc
 - The proposed CondAcc method is implemented in [`select_condacc.py`](select_condacc.py)
-- To reproduce the results in the paper, see [Evaluation](#Evaluation)
+- To reproduce the results in the paper, see [Evaluation](#evaluation)
 
-### Datamodels
+## Datamodels
 - To train datamodels, run:
 ```bash
 $ bash scripts/train_datamodels.sh
@@ -49,20 +49,20 @@ $ bash scripts/train_datamodels.sh
 $ bash scripts/test_datamodels.sh
 ```
 - The Datamodels selection is implemented in [`select_datamodels.py`](select_datamodels.py)
-- To reproduce the results in the paper, see [Evaluation](#Evaluation)
+- To reproduce the results in the paper, see [Evaluation](#evaluation)
 - Download pretrained datamodels [`out_datamodel.zip`](https://drive.google.com/file/d/1Z9Fci7bOU9WLvgFI_0y2iTTJgiFKfYhM/view?usp=sharing)
 
-### Baselines
+## Baselines
 - The **Oneot** baseline:
     - First, run 1-shot ICL by `$ bash scripts/run_oneshot.sh {gpu_i}`
     - The subset selection process is implemented in [`baseline_oneshot.py`](baseline_oneshot.py)
 - The **TopPrompts** baseline is implemented in [`baseline_top_prompts.py`](baseline_top_prompts.py)
 - The **Calib** baseline is implemented in [`calib_evaluate.py`](calib_evaluate.py)
     - `$ bash scripts/run_calibration.sh {gpu_i}`
-- To reproduce the results in the paper, see [Evaluation](#Evaluation)
+- To reproduce the results in the paper, see [Evaluation](#evaluation)
 
 
-### Evaluation
+## Evaluation
 The following scripts will run the two proposed methods and all baselines.
 #### Labeled Setup
 ```bash
@@ -78,7 +78,7 @@ $ bash scripts/run_unlabel.sh {gpu_i}
 $ bash scripts/run_ood.sh {gpu_i}
 ```
 
-### Data
+## Data
 - We include the data in [`data/`](data/). The files are organized as follow:
 ```
 data
@@ -100,7 +100,7 @@ data
 - To reproduce the data creation for the unlabeled setups, see `create_unlabeled.py`
 
 
-### Construct $\mathcal{D}_{\text{ICL}}$
+## Construct $\mathcal{D}_{\text{ICL}}$
 - We release the set of prompt-output pairs $\mathcal{D}_{\text{ICL}}$ in [`Dicl`](https://drive.google.com/file/d/1gKueGgRjVKWZ5RXE9PBVyCD5dvbLYdRk/view?usp=sharing). The files are organized as follow:
 
 ```
@@ -139,7 +139,7 @@ Dicl
         - add the argument `--is_unlabel` to build $\mathcal{D}_{\text{ICL}}$ for the unlabeled setup.
     - *Note*: the construction process may take hundreds of GPU hours for a task
   
-### How to use the released $\mathcal{D}_{\text{ICL}}$?
+## How to use the released $\mathcal{D}_{\text{ICL}}$?
 - We include an example code in [`demo`](demo/demo_dicl.py)
 - ```$ bash demo/download_dicl.sh``` will automatically download and unzip [`Dicl.zip`](https://drive.google.com/file/d/1gKueGgRjVKWZ5RXE9PBVyCD5dvbLYdRk/view?usp=sharing)
 - ```$ python -m demo.demo_dicl --model gpt-j-6b --task glue-sst2```, use `--is_unlabel` for the unlabeled setup.
