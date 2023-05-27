@@ -175,7 +175,7 @@ Dicl
         ```
         
 ## Stable Subset Examples
-- We include the identifed stable subset examples in [`out_select`](out_select)
+- We include the identified stable subset examples in [`out_select`](out_select)
     - `label_stable_subsets/{model}-{task}-{CondAcc/Datamodels}.jsonl` each file shows a stable subset (20 examples) identified by CondAcc/Datamodels in the labeled setup
     - `unlabel_stable_subsets/{model}-{task}-CondAcc.jsonl` each file shows a stable subset (20 examples) identified by CondAcc in the unlabeled setup
     - `good_example_ids/*.npy` each file shows the corresponding 20 example IDs
