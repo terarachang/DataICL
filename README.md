@@ -27,11 +27,13 @@
     - [Unlabeled](#unlabeled-setup)
     - [OOD](#ood-setup)
 6. [Data](#data)
-7. [Construct $\mathcal{D}_{\text{ICL}}$](#construct-$\mathcal{D}_{\text{ICL}}$)
+7. Construct $\mathcal{D}_{\text{ICL}}$
+8. How to use the released $\mathcal{D}_{\text{ICL}}$?
 
 ### Quick Start
 - ```$ pip install -r requirements.txt```
-- ```$ bash demo/download_dicl.sh``` will download our collected prompt-output pairs
+- ```$ bash demo/download_dicl.sh``` will download the released prompt-output pairs
+    - see the Construct $\mathcal{D}_{\text{ICL}}$ section below for more details
 
 ### CondAcc
 - The proposed CondAcc method is implemented in [`select_condacc.py`](select_condacc.py)
@@ -134,7 +136,7 @@ Dicl
         - `gpu_i`: the available gpu id, default 0.
         - `segment_i`: [0-4]. We divide the list of sampled prompts into 5 segments to run them in parallel.
         - `permute_i`: [0-1]. Given the same prompt, we run 2 different permutations.
-        - add the argument `--is_unlabel` to build $\mathcal{D}_{\text{ICL}}$ for the unlabeled setup
+        - add the argument `--is_unlabel` to build $\mathcal{D}_{\text{ICL}}$ for the unlabeled setup.
     - *Note*: the construction process may take hundreds of GPU hours for a task
   
 ### How to use the released $\mathcal{D}_{\text{ICL}}$?
@@ -166,7 +168,7 @@ Dicl
                               'options': ['negative', 'positive'],
                               'output': 'positive',
                               'task': 'glue-sst2'}],
-        'train_ids': array([101, 286, 666, 623])},
+        'train_ids': np.array([101, 286, 666, 623]),
         'dev accuracy': 0.85,
         'logits': a torch.FloatTensor of shape [n_dev, n_labels]}
         ```
