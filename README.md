@@ -16,6 +16,23 @@
 
 > This repository is based on [MetaICL](https://github.com/facebookresearch/MetaICL#metaicl-learning-to-learn-in-context)
 
+## Content
+
+1. [Quick Start](#quick-start)
+2. [CondAcc](#condacc)
+3. [Datamodels](#datamodels)
+4. [Baselines](#baselines)
+5. [Evaluation](#evaluation)
+    - [Labeled](#labeled-setup)
+    - [Unlabeled](#unlabeled-setup)
+    - [OOD](#ood-setup)
+6. [Data](#data)
+7. [Construct $\mathcal{D}_{\text{ICL}}$](#construct-$\mathcal{D}_{\text{ICL}}$)
+
+### Quick Start
+- ```$ pip install -r requirements.txt```
+- ```$ bash demo/download_dicl.sh``` will download our collected prompt-output pairs
+
 ### CondAcc
 - The proposed CondAcc method is implemented in [`select_condacc.py`](select_condacc.py)
 - To reproduce the results in the paper, see [Evaluation](#Evaluation)
@@ -104,7 +121,6 @@ Dicl
 ├── opt-13b/
 ├── opt-6.7b/
 └── gpt-neo-2.7B/
-
 ```
 - Each task has three folders, e.g. `label_glue-sst2` and `unlabel_glue-sst2` for labeled/unlabeled setup (Sec 2), and `test_glue-sst2` for evaluating how well Datamodels can approximate the target LLM on the held-out prompts (Appendix A3).
 - Each task folder contains 4 files:
@@ -127,7 +143,7 @@ Dicl
 - ```$ python -m demo.demo_dicl --model gpt-j-6b --task glue-sst2```, use `--is_unlabel` for the unlabeled setup.
     -  this will return a list of datapoints, where a datapoint is a dict that looks like: 
     - ```python     
-      {'train_examples': [   { 'input': 'Review: whole mess \nSentiment:',
+      {'train_examples': [{   'input': 'Review: whole mess \nSentiment:',
                               'options': ['negative', 'positive'],
                               'output': 'negative',
                               'task': 'glue-sst2'},
