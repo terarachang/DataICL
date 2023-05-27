@@ -106,7 +106,7 @@ Dicl
 └── gpt-neo-2.7B/
 
 ```
-- Each task has three folders, e.g. `label_glue-sst2` and `unlabel_glue-sst2` for labeled/unlabeled setup (Sec 2), and `test_glue-sst2` for evaluating how well Datamodels can approximate the target LLM (Appendix A3).
+- Each task has three folders, e.g. `label_glue-sst2` and `unlabel_glue-sst2` for labeled/unlabeled setup (Sec 2), and `test_glue-sst2` for evaluating how well Datamodels can approximate the target LLM on the held-out prompts (Appendix A3).
 - Each task folder contains 4 files:
     - `*sampled.pkl`: the list of sampled prompts, where each prompt consists of a list of $K$ training examples.
     - `*train_ids.npy`: the training example IDs in each prompt, where each row in the array consists of $K$ example IDs.
@@ -120,5 +120,37 @@ Dicl
         - `permute_i`: [0-1]. Given the same prompt, we run 2 different permutations.
         - add the argument `--is_unlabel` to build $\mathcal{D}_{\text{ICL}}$ for the unlabeled setup
     - *Note*: the construction process may take hundreds of GPU hours for a task
-
-
+  
+### How to use the released $\mathcal{D}_{\text{ICL}}$?
+- We include an example code in [`demo`](demo.demo_dicl.py)
+- ```$ bash demo/download_dicl.sh``` will automatically download and unzip [`Dicl.zip`](https://drive.google.com/file/d/1gKueGgRjVKWZ5RXE9PBVyCD5dvbLYdRk/view?usp=sharing)
+- ```$ python -m demo.demo_dicl --model gpt-j-6b --task glue-sst2```, use `--is_unlabel` for the unlabeled setup.
+    -  this will return a list of datapoints, where a datapoint is a dict that looks like: 
+    - ```python     
+      {'train_examples': [   { 'input': 'Review: whole mess \nSentiment:',
+                              'options': ['negative', 'positive'],
+                              'output': 'negative',
+                              'task': 'glue-sst2'},
+                          {   'input': 'Review: but it also comes with the '
+                                       'laziness and arrogance of a thing that '
+                                       "already knows it 's won . \n"
+                                       'Sentiment:',
+                              'options': ['negative', 'positive'],
+                              'output': 'negative',
+                              'task': 'glue-sst2'},
+                          {   'input': 'Review: intelligent and moving . \n'
+                                       'Sentiment:',
+                              'options': ['negative', 'positive'],
+                              'output': 'positive',
+                              'task': 'glue-sst2'},
+                          {   'input': 'Review: does point the way for '
+                                       'adventurous indian filmmakers toward a '
+                                       'crossover into nonethnic markets . \n'
+                                       'Sentiment:',
+                              'options': ['negative', 'positive'],
+                              'output': 'positive',
+                              'task': 'glue-sst2'}],
+        'train_ids': array([101, 286, 666, 623])},
+        'dev accuracy': 0.85,
+        'logits': a torch.FloatTensor of shape [n_dev, n_labels]}
+        ```
