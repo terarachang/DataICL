@@ -122,7 +122,7 @@ Dicl
     - *Note*: the construction process may take hundreds of GPU hours for a task
   
 ### How to use the released $\mathcal{D}_{\text{ICL}}$?
-- We include an example code in [`demo`](demo.demo_dicl.py)
+- We include an example code in [`demo`](demo/demo_dicl.py)
 - ```$ bash demo/download_dicl.sh``` will automatically download and unzip [`Dicl.zip`](https://drive.google.com/file/d/1gKueGgRjVKWZ5RXE9PBVyCD5dvbLYdRk/view?usp=sharing)
 - ```$ python -m demo.demo_dicl --model gpt-j-6b --task glue-sst2```, use `--is_unlabel` for the unlabeled setup.
     -  this will return a list of datapoints, where a datapoint is a dict that looks like: 
