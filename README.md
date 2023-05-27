@@ -29,6 +29,7 @@
 6. [Data](#data)
 7. Construct $\mathcal{D}_{\text{ICL}}$
 8. How to use the released $\mathcal{D}_{\text{ICL}}$?
+9. [Stable Subset Examples](stable-subset-examples)
 
 ## Quick Start
 - ```$ pip install -r requirements.txt```
@@ -172,3 +173,9 @@ Dicl
         'dev accuracy': 0.85,
         'logits': a torch.FloatTensor of shape [n_dev, n_labels]}
         ```
+        
+## Stable Subset Examples
+- We include the identifed stable subset examples in [`out_select`](out_select)
+    - `label_stable_subsets/{model}-{task}-{CondAcc/Datamodels}.jsonl` each file shows a stable subset (20 examples) identified by CondAcc/Datamodels in the labeled setup
+    - `unlabel_stable_subsets/{model}-{task}-CondAcc.jsonl` each file shows a stable subset (20 examples) identified by CondAcc in the unlabeled setup
+    - `good_example_ids/*.npy` each file shows the corresponding 20 example IDs
