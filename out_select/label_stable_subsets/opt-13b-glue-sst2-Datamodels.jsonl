@@ -1,0 +1,20 @@
+{"task": "glue-sst2", "input": "Review: the action scenes are poorly delivered \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: walked out muttering words like `` horrible '' and `` terrible , '' \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: hampered -- no , paralyzed -- by a self-indulgent script ... \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: has the thrown-together feel of a summer-camp talent show : hastily written , underrehearsed , arbitrarily plotted and \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: low on both suspense and payoff \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: lags badly in the middle and lurches between not-very-funny comedy , unconvincing dramatics and some last-minute action strongly reminiscent of run lola run \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the plot grows thin soon , \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: idea ( of middle-aged romance ) is not handled well and , except for the fine star performances \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a documentary fails to live up to -- or offer any new insight into -- its chosen topic \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: are the uneven performances by the cast members , who seem bound and determined to duplicate bela lugosi 's now-cliched vampire accent \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: unpretentious , charming , quirky , original \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: take care is nicely performed by a quintet of actresses , \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: huge-screen format to make an old-fashioned nature film that educates viewers with words and pictures while entertaining them \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: demands and receives excellent performances \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: xxx is a blast of adrenalin , \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the chateau , a sense of light-heartedness , that makes it attractive throughout \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: again dazzle and delight us \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: colorful , vibrant introduction \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: k-19 : the widowmaker is a great yarn . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: fare , with enough creative energy and wit to entertain all ages \nSentiment:", "output": "positive", "options": ["negative", "positive"]}

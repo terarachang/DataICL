@@ -1,0 +1,20 @@
+{"task": "glue-sst2", "input": "Review: a plot cobbled together from largely flat and uncreative moments \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the action scenes are poorly delivered \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: is less successful on other levels \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the dehumanizing and ego-destroying process \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a giant step backward \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: a bad idea from frame one \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: has the thrown-together feel of a summer-camp talent show : hastily written , underrehearsed , arbitrarily plotted and \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: bad run \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: stiff or just plain bad \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: churn out one mediocre movie after another \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: spiffy animated feature \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: hugh grant , who has a good line in charm \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: huge-screen format to make an old-fashioned nature film that educates viewers with words and pictures while entertaining them \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: help chicago make the transition from stage to screen with considerable appeal intact \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the wonderful cinematography and naturalistic acting \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: beautiful to watch and \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: k-19 : the widowmaker is a great yarn . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: has created a brilliant motion picture . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: scenes of cinematic perfection \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: convey a strong sense of the girls ' environment . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}

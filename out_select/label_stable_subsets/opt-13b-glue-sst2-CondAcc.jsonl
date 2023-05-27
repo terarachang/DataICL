@@ -1,0 +1,20 @@
+{"task": "glue-sst2", "input": "Review: a plot cobbled together from largely flat and uncreative moments \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: lacks the charisma and ability to carry the film on his admittedly broad shoulders . \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: has the thrown-together feel of a summer-camp talent show : hastily written , underrehearsed , arbitrarily plotted and \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: the surface histrionics failing to compensate for the paper-thin characterizations and facile situations \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: low on both suspense and payoff \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: makes piecing the story together frustrating difficult \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: lags badly in the middle and lurches between not-very-funny comedy , unconvincing dramatics and some last-minute action strongly reminiscent of run lola run \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: virtually unwatchable \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: low-brow humor , gratuitous violence \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: uneven film \nSentiment:", "output": "negative", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: gorgeous and deceptively minimalist \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: spiffy animated feature \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: shot in artful , watery tones of blue , green and brown \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: rich and full \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: warm water under a red bridge is a celebration of feminine energy , a tribute to the power of women to heal . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: luminous interviews and amazingly evocative film from three decades ago \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: maybe it is formula filmmaking , but there 's nothing wrong with that if the film is well-crafted and this one is . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: oozing , chilling and heart-warming \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: k-19 : the widowmaker is a great yarn . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
+{"task": "glue-sst2", "input": "Review: does a great combination act as narrator , jewish grandmother and subject -- taking us through a film that is part biography , part entertainment and part history . \nSentiment:", "output": "positive", "options": ["negative", "positive"]}
