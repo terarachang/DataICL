@@ -29,7 +29,7 @@
 6. [Data](#data)
 7. Construct $\mathcal{D}_{\text{ICL}}$
 8. How to use the released $\mathcal{D}_{\text{ICL}}$?
-9. [Stable Subset Examples](stable-subset-examples)
+9. [Stable Subset Examples](#stable-subset-examples)
 
 ## Quick Start
 - ```$ pip install -r requirements.txt```
