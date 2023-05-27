@@ -1,16 +1,23 @@
-## Data Curation Alone Can Stabilize In-context Learning (ACL 23)
+## DataICL
 
 ![Python](https://img.shields.io/badge/python-3.8-green.svg?style=plastic)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.12-green.svg?style=plastic)
 ![transformers](https://img.shields.io/badge/transformers-4.20.1-green.svg?style=plastic)
 ![GPU](https://img.shields.io/badge/RTX-A6000-green.svg?style=plastic)
 
-> https://arxiv.org/abs/2212.10378
+
+> **Data Curation Alone Can Stabilize In-context Learning (ACL 2023)**<br>
+> Ting-Yun Chang and Robin Jia<br>
+
+> Paper: https://arxiv.org/pdf/2212.10378.pdf
+
+>
+> **Abstract:** *In-context learning (ICL) enables large language models (LLMs) to perform new tasks by prompting them with a sequence of training examples. However, it is known that ICL is very sensitive to the choice of training examples: randomly sampling examples from a training set leads to high variance in performance. In this paper, we show that carefully curating a subset of training data greatly stabilizes ICL performance without any other changes to the ICL algorithm (e.g., prompt retrieval or calibration). We introduce two methods to choose training subsets -- both score training examples individually, then select the highest-scoring ones. CondAcc scores a training example by its average dev-set ICL accuracy when combined with random training examples, while Datamodels learns linear regressors that estimate how the presence of each training example influences LLM outputs. Across five tasks and two LLMs, sampling from stable subsets selected by CondAcc and Datamodels improves average accuracy over sampling from the entire training set by 7.7% and 6.3%, respectively. Surprisingly, the stable subset examples are not especially diverse in content or low in perplexity, in contrast with other work suggesting that diversity and perplexity are important when prompting LLMs.*
 
 > This repository is based on [MetaICL](https://github.com/facebookresearch/MetaICL#metaicl-learning-to-learn-in-context)
 
 ### CondAcc
-- The proposed CondAcc method is implemented in `select_condacc.py`
+- The proposed CondAcc method is implemented in [`select_condacc.py`](select_condacc.py)
 - To reproduce the results in the paper, see [Evaluation](#Evaluation)
 
 ### Datamodels
@@ -22,16 +29,16 @@ $ bash scripts/train_datamodels.sh
 ```bash
 $ bash scripts/test_datamodels.sh
 ```
-- The Datamodels selection is implemented in `select_datamodels.py`
+- The Datamodels selection is implemented in [`select_datamodels.py`](select_datamodels.py)
 - To reproduce the results in the paper, see [Evaluation](#Evaluation)
 - Download pretrained datamodels [`out_datamodel.zip`](https://drive.google.com/file/d/1Z9Fci7bOU9WLvgFI_0y2iTTJgiFKfYhM/view?usp=sharing)
 
 ### Baselines
 - The **Oneot** baseline:
     - First, run 1-shot ICL by `$ bash scripts/run_oneshot.sh {gpu_i}`
-    - The subset selection process is implemented in `baseline_oneshot.py`
-- The **TopPrompts** baseline is implemented in `baseline_top_prompts.py`
-- The **Calib** baseline is implemented in `calib_evaluate.py`
+    - The subset selection process is implemented in [`baseline_oneshot.py`](baseline_oneshot.py)
+- The **TopPrompts** baseline is implemented in [`baseline_top_prompts.py`](baseline_top_prompts.py)
+- The **Calib** baseline is implemented in [`calib_evaluate.py`](calib_evaluate.py)
     - `$ bash scripts/run_calibration.sh {gpu_i}`
 - To reproduce the results in the paper, see [Evaluation](#Evaluation)
 
@@ -99,6 +106,7 @@ Dicl
 └── gpt-neo-2.7B/
 
 ```
+- Each task has three folders, e.g. `label_glue-sst2` and `unlabel_glue-sst2` for labeled/unlabeled setup (Sec 2), and `test_glue-sst2` for evaluating how well Datamodels can approximate the target LLM (Appendix A3).
 - Each task folder contains 4 files:
     - `*sampled.pkl`: the list of sampled prompts, where each prompt consists of a list of $K$ training examples.
     - `*train_ids.npy`: the training example IDs in each prompt, where each row in the array consists of $K$ example IDs.
