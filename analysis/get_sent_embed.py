@@ -30,7 +30,7 @@ def get_sentbert_embed(model, encoded_input):
 
 def get_roberta_embed(model, encoded_input):
     with torch.no_grad():
-        sentence_embeddings = model(**encoded_input).pooler_output
+        sentence_embeddings = model(**encoded_input).last_hidden_state[:, 0]
 
     sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
     return sentence_embeddings.cpu()
